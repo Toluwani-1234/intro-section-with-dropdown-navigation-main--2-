@@ -106,6 +106,20 @@ h1 {
   width: auto;
 }
 
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 3.2rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 /* Dropdowns */
 
 .dropdown li {
@@ -194,28 +208,36 @@ ul li:hover ul.dropdown .dropdown-details {
   html {
     font-size: 50%;
   }
-}
-
-/* Mobile */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  display: none;
-}
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #333;
-}
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
-}
-/* Max-width: 576px */
-@media (max-width: 36em) {
+  h1 {
+    font-size: 4rem;
+  }
+  /* Mobile */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
   .nav-list,
   .nav-cta {
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
     opacity: 0;
 
     /* 2) Make it unaccessible to mouse and keyboard */
@@ -224,9 +246,7 @@ ul li:hover ul.dropdown .dropdown-details {
     /* 3) Hide it from screen readers */
     visibility: hidden;
   }
-
-  /* .nav-open .nav-list,
-  .nav-cta {
+  .nav-open .nav-list {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
@@ -240,9 +260,38 @@ ul li:hover ul.dropdown .dropdown-details {
   .nav-open .icon-mobile-nav[name="menu-outline"] {
     display: none;
   }
-
-  ul {
+  .main-nav-list {
     flex-direction: column;
     gap: 4.8rem;
-  } */
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-top,
+  .container-bottom {
+    max-width: 325px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .section-text {
+    text-align: center;
+  }
+  .section-text p {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: hsl(0, 0%, 41%);
+    padding: 1.4rem 0rem 0rem 0;
+  }
+  .clients {
+    justify-content: center;
+    align-items: center;
+  }
 }
