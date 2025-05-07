@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css " />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header container-top">
+      <div class="nav">
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li>
+              <a href="#"
+                >Features
+                <span
+                  ><img
+                    src="images/icon-arrow-down.svg"
+                    alt="arrow-down" /></span
+              ></a>
+              <ul class="dropdown">
+                <div class="dropdown-sub">
+                  <li class="dropdown-details">
+                    <div class="dropdown-img">
+                      <img src="images/icon-todo.svg" alt="list" />
+                    </div>
+                    <div class="dropdown-text"><a href="#"> Todo list</a></div>
+                  </li>
+                  <li class="dropdown-details">
+                    <div class="dropdown-img">
+                      <img src="images/icon-calendar.svg" alt="calendar" />
+                    </div>
+                    <div class="dropdown-text"><a href="#">Calendar</a></div>
+                  </li>
+                  <li class="dropdown-details">
+                    <div class="dropdown-img">
+                      <img src="images/icon-reminders.svg" alt="reminders" />
+                    </div>
+                    <div class="dropdown-text"><a href="#">Reminders</a></div>
+                  </li>
+                  <li class="dropdown-details">
+                    <div class="dropdown-img">
+                      <img src="images/icon-planning.svg" alt="planning" />
+                    </div>
+                    <div class="dropdown-text"><a href="#">Planning</a></div>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Company
+                <span
+                  ><img
+                    src="images/icon-arrow-down.svg"
+                    alt="arrow-down" /></span
+              ></a>
+              <ul class="dropdown">
+                <div class="dropdown-sub">
+                  <li class="dropdown-details">
+                    <div class="dropdown-text"><a href="#">History</a></div>
+                  </li>
+                  <li class="dropdown-details">
+                    <div class="dropdown-text"><a href="#">Our Team</a></div>
+                  </li>
+                  <li class="dropdown-details">
+                    <div class="dropdown-text"><a href="#">Blog</a></div>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-cta">
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#" class="cta">Register</a></li>
+        </ul>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </div>
+
+    <div class="main container-bottom">
+      <div class="section-body">
+        <div class="section-text">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn">Learn more</button>
+        </div>
+
+        <div class="clients">
+          <img src="images/client-databiz.svg" alt="clients" />
+          <img src="images/client-audiophile.svg" alt="clients" />
+          <img src="images/client-meet.svg" alt="clients" />
+          <img src="images/client-maker.svg" alt="clients" />
+        </div>
+      </div>
+      <div class="section-img">
+        <picture>
+          <source
+            media="(max-width: 576px)"
+            srcset="images/image-hero-mobile.png"
+          />
+          <img src="images/image-hero-desktop.png" alt="hero-image" />
+        </picture>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Baby Engineer</a>.
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

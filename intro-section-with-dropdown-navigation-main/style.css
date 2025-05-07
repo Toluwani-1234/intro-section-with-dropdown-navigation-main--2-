@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Epilogue", sans-serif;
+}
+.container-top {
+  margin: 2.2rem auto;
+  max-width: 130rem;
+}
+.container-bottom {
+  margin: 3.8rem auto;
+  max-width: 105rem;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.nav {
+  display: flex;
+  gap: 4.8rem;
+}
+.nav-cta {
+  justify-self: end;
+}
+.cta {
+  border: 1px solid hsl(0, 0%, 41%);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.cta:hover {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  transition: all 0.3s;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+a:hover {
+  color: hsl(0, 0%, 8%);
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.2rem;
+}
+.section-img img {
+  height: auto;
+  width: 100%;
+}
+.section-text {
+  padding-top: 11.8rem;
+}
+h1 {
+  font-size: 7.2rem;
+  line-height: 1;
+}
+.section-text p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: hsl(0, 0%, 41%);
+  padding: 2.8rem 6.8rem 1.8rem 0;
+}
+.btn {
+  border: none;
+  border-radius: 1rem;
+  color: hsl(0, 0%, 98%);
+  padding: 1.6rem 2.8rem;
+  background-color: hsl(0, 0%, 8%);
+  margin-top: 3.2rem;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+}
+.btn:hover {
+  border: 1px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.section-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.clients {
+  display: flex;
+  gap: 2rem;
+}
+.clients img {
+  height: 2rem;
+  width: auto;
+}
+
+/* Dropdowns */
+
+.dropdown li {
+  display: block;
+}
+.dropdown {
+  background: rgba(255, 255, 255, 0.463);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.104);
+  padding: 1.8rem;
+  margin-top: 1.2rem;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+.dropdown-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+ul li:hover ul.dropdown {
+  display: block;
+}
+ul li:hover ul.dropdown .dropdown-details {
+  display: flex;
+  gap: 1.6rem;
+}
+
+/*Responsive Design */
+/* Max-Width: 1047px */
+@media (max-width: 65.4em) {
+  .container-top {
+    max-width: 85rem;
+  }
+  .container-bottom {
+    max-width: 85rem;
+  }
+  ul {
+    gap: 1.6rem;
+  }
+  .nav {
+    gap: 3.2rem;
+  }
+  h1 {
+    font-size: 5.4rem;
+  }
+  .section-text p {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: hsl(0, 0%, 41%);
+    padding: 1.4rem 5.4rem 0rem 0;
+  }
+}
+
+/*Max-width: 862px */
+@media (max-width: 53.9em) {
+  html {
+    font-size: 53.1%;
+  }
+  .container-top {
+    max-width: 73rem;
+  }
+  .container-bottom {
+    max-width: 70rem;
+  }
+  ul {
+    font-size: 1.2rem;
+    gap: 1.2rem;
+  }
+  .section-text {
+    padding-top: 2.4rem;
+  }
+  .btn {
+    margin-bottom: 2.4rem;
+  }
+  /* .section-body {
+    justify-content: space-evenly;
+  } */
+}
+
+/* Max-width: 704px */
+@media (max-width: 44em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Mobile */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+/* Max-width: 576px */
+@media (max-width: 36em) {
+  .nav-list,
+  .nav-cta {
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /* .nav-open .nav-list,
+  .nav-cta {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 4.8rem;
+  } */
+}
